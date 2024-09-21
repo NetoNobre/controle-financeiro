@@ -10,19 +10,36 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-around;
     padding: 15px 0px;
-    gap: 10px
+    gap: 10px;
 
     @media (max-width: 750px) {
        display: grid; 
+       padding: 10px;
+       gap: 15px;
+    }
+
+    @media (max-width: 480px) {
+       width: 100%;
+       margin: 10px auto;
     }
 `;
 
 export const InputContent = styled.div`
     display: flex;
     flex-direction: column;
+
+    @media (max-width: 480px) {
+        width: 100%;
+    }
 `;
 
-export const Label = styled.label``;
+export const Label = styled.label`
+    font-size: 14px;
+
+    @media (max-width: 480px) {
+        font-size: 12px;
+    }
+`;
 
 export const Input = styled.input`
     outline: none;
@@ -30,6 +47,11 @@ export const Input = styled.input`
     padding: 5px 10px;
     font-size: 15px;
     border: 1px solid #ccc;
+
+    @media (max-width: 480px) {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
 `;
 
 export const RadioGroup = styled.div`
@@ -41,6 +63,10 @@ export const RadioGroup = styled.div`
         margin-right: 5px;
         accent-color: black;
         margin-top: 0px;
+
+        @media (max-width: 480px) {
+            margin-left: 10px;
+        }
     }
 `;
 
@@ -51,4 +77,9 @@ export const Button = styled.button`
     cursor: pointer;
     color: white;
     background-color: #182848;
+
+    @media (max-width: 480px) {
+        width: 100%;
+        padding: 10px;
+    }
 `;
